@@ -1,3 +1,5 @@
+package application;
+
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -8,7 +10,7 @@ public class Server {
 
     public static void main(String[] args) {
         try(ServerSocket server = new ServerSocket(8189)) {
-            log.debug("Server started...");
+            log.debug("application.Server started...");
             while (true) {
                 Socket socket = server.accept();
                 log.debug("Client accepted...");
